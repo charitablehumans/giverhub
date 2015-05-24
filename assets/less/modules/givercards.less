@@ -1,0 +1,103 @@
+
+/* Giver Cards */
+
+.giver-cards-page-container {
+  padding-top: 5px !important;
+}
+.giver-cards-block {
+  padding: 15px 28px 15px;
+  color: #555;
+  border: solid 3px #ABABAB;
+}
+.giver-cards-block-title {
+  .roboto-regular;
+  font-weight: 300 !important;
+  margin-bottom: 15px !important;
+}
+.giver-cards-page-heading1 {
+  font-size: 44px;
+  color: @body-color;
+}
+
+.giver-cards-page-heading2 {
+  font-size: 26px;
+  color: @body-color;
+}
+.giver-cards-page-heading3 {
+  font-size: 24px;
+  color: @body-color;
+}
+.giver-cards-block div h2 {
+  color: #000;
+}
+.giver-cards-donation-amount-sign {
+  position: absolute;
+  z-index: 9999;
+  font-size: 18px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.giver-cards-donation-amount-text {
+  padding-left: 20px !important;
+}
+.giver_card_error {
+  padding: 15px;
+}
+#giver-card-review-modal .modal-body {
+  text-align: center;
+  font-weight: bold;
+}
+.giver_card_friend_chosen, .giver_card_friend_results {
+  margin: 0;
+  padding: 0;
+}
+.giver_card_friend_chosen li, .giver_card_friend_results li {
+  list-style: none;
+}
+.giver_card_friend_chosen img, .giver_card_friend_results img {
+  height: 30px;
+  margin-right: 5px;
+}
+.giver_card_friend_results li a {
+  width: 100%;
+  display: block;
+}
+.giver_card_friend_results li:hover {
+  background-color: lightblue;
+}
+.giver-cards-block-top {
+  margin-top: 20px;
+}
+.givercard_select_options {
+  display: none;
+}
+
+.giving-pots-table {
+  tr {
+    td.summary {
+      width: 40%;
+    }
+    td.pot-size {
+      width: 20%;
+    }
+    td.remaining {
+      width: 20%;
+    }
+    td.buttons {
+      width: 20%;
+    }
+  }
+}
+
+form#giver_cards {
+  .giver-cards-block {
+    @media (max-width : 480px) {
+      padding-left: 4px;
+      padding-right: 4px;
+      td {
+        font-size: 9px;
+        padding: 2px;
+      }
+    }
+  }
+}

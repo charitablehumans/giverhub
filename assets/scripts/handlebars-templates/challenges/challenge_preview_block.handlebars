@@ -1,0 +1,61 @@
+<div class="block challenge-preview-block">
+	<header><span class="preview">Challenge Preview</span>{{#if name}}{{name}}{{else}}[Challenge name]{{/if}}</header>
+	<p class="description">{{#if description}}{{{description}}}{{else}}[Challenge description]{{/if}}</p>
+	{{#if emails.length}}
+		<p class="friends">Friends Challenged</p>
+		<ul class="friend-list">
+			{{#each emails}}
+                <li>{{this}}</li>
+			{{/each}}
+        </ul>
+	{{/if}}
+	{{#if video_id}}
+        <iframe
+                class="youtube-player youtube-preview-iframe"
+                type="text/html"
+                width="100%"
+                height=""
+                src="https://www.youtube.com/embed/{{ youtubeVideoId }}"
+                allowfullscreen
+                frameborder="0"></iframe>
+	{{/if}}
+
+    <div class="accept-reject">
+        <button class="btn btn-success btn-lg">ACCEPT CHALLENGE</button>
+        <button class="btn btn-danger btn-lg">REJECT CHALLENGE</button>
+    </div>
+	{{#if charity_name}}
+		<p class="chicken">If you're too chicken to perform the challenge, or would prefer to donate,
+		{{from_user_first_name}} requests that you make a donation to: </p>
+        <div class="nonprofit">
+            <div class="nonprofit-name">{{ charity_name }}</div>
+            {{#if charity_score}}
+                <div class="clearfix gh_spacer_14 progress_bar gh_popover"
+                     data-trigger="hover"
+                     data-placement="top"
+                     data-container="body"
+                     data-toggle="popover"
+                     data-html="true"
+                     data-content="This is the nonprofits Overall Score. It's based on program services financial data. it's the program services percentage of total functional expenses. A score of 100 means that the nonprofit spends all their money on program services.">
+                    <div class="col-xs-10 col-md-10 progress progress-secondary">
+                        <div class="progress-bar progress-bar-success noise" role="progressbar" aria-valuenow="{{ charity_score }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ charity_score }}%"></div>
+                    </div>
+                    <div class="col-xs-2 col-md-2 progress-secondary-percent progress-bar-resize">{{ charity_score }}</div>
+                </div>
+            {{/if}}
+            {{#if charity_tagline}}
+                <div class="nonprofit-tagline" title="{{charity_tagline}}">
+					{{charity_tagline}}
+                </div>
+            {{/if}}
+            <div class="donate-container">
+                <label id="activity-post-donate-amount-label" for="activity-post-donate-amount">Easy Donate: </label>
+                <input id="activity-post-donate-amount" type="text" class="form-control charity-profile-donation-amount-input" placeholder="$ Amount"/>
+                <a class="btn-donate-using-cc-paypal-button-with-amount paypal"
+				   href="#"><img src="/img/button_paypal.png" alt="Donate to {{ charity_name }} using Credit Card"></a>
+                <a class="btn-donate-using-cc-paypal-button-with-amount cc"
+				   href="#"><img src="/img/button_cc.png" alt="Donate to {{ charity_name }} using Credit Card"></a>
+            </div>
+        </div>
+	{{/if}}
+</div>

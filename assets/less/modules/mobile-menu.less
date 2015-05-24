@@ -1,0 +1,96 @@
+.hidden-outside-mobile-menu {
+  display: none;
+}
+
+.mobile-menu-bg {
+  .hidden-outside-mobile-menu {
+    display: inline;
+  }
+  li a img {
+    height: 35px;
+  }
+  li.menu-label {
+    color: grey;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+/* Mobile menu - fb style */
+.mobile-menu > ul > li {
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #6E6E6E;
+}
+.mobile-menu > ul > li:first-child {
+  //border-top: 1px solid #6E6E6E;
+}
+.mobile-menu > ul > li > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.mobile-menu > ul > li > form > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.mobile-menu {
+  margin: 0px;
+  width: 180px;
+  text-transform: none;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -200px; /* Hides Brief Menu Popup As JavaScript Loads */
+  z-index: 9998;
+  display: block;
+  height: 100%;
+  overflow: scroll;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+.mobile-menu.active {
+  height: auto;
+}
+.mobile-menu-bg {
+  overflow: hidden;
+  background: #333;
+  margin: 0px;
+  position: fixed;
+  width: 165px;
+  top: 0px;
+  bottom: 0px;
+  left: -200px; /* Hides Brief Menu Popup As JavaScript Loads */
+  z-index: 9997;
+  display: none;
+  height: 100%;
+  -webkit-box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
+
+}
+.mobile-menu.active,
+.mobile-menu-bg.active {
+  display: none;
+}
+/* Floats */
+.clearfloat:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.fb-style-menu {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  clear:both;
+}
+.fb-style-menu li {
+  width: 165px;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.fb-style-menu li:hover {
+  background-color: #424242;
+  cursor: pointer;
+}

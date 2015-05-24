@@ -1,0 +1,60 @@
+.petition-activity {
+  padding-top: 8px !important;
+  .top-wrapper {
+    .content-div, .date_div {
+      display: inline-block;
+      @media (max-width: 700px) {
+        font-size: 10px;
+      }
+    }
+    .content-div {
+      width: 79%;
+      @media (max-width: 700px) {
+        width: 71%;
+      }
+      white-space: normal;
+    }
+    .date_div {
+      width: 20%;
+      @media (max-width: 700px) {
+        width: 28%;
+      }
+      vertical-align: top;
+      text-align: right;
+    }
+  }
+  .petition-wrapper {
+    margin-top: 10px;
+    img, iframe {
+      max-height: 128px;
+      width : 40%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    iframe {
+      height: 64px;
+      @media (min-width: 400px) and (max-width: 500px) {
+        height: 80px;
+      }
+      @media (min-width: 500px) and (max-width: 600px) {
+        height: 128px;
+      }
+      @media (min-width: 600px) {
+        height: 200px;
+      }
+    }
+    .summary {
+      width: 100%;
+      display: inline-block;
+      color: #7d7d7d;
+      font-size: 14px;
+      line-height: 14px;
+      .roboto-light-italic;
+      max-height: 128px;
+      overflow: hidden;
+    }
+    .has-img {
+      width: 59%;
+    }
+  }
+}

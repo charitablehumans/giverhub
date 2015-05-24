@@ -1,0 +1,19 @@
+{{#with bet}}
+	{{#if claim_conflict }}
+        <p>Both you and {{{ friend_link }}} claim to have won the bet:</p>
+        <h2>{{ name }}</h2>
+        <p>
+            As a reminder, here are the terms of the bet:<br/>
+			{{ terms }}.
+        </p>
+        <p><br/>You can change your mind and take the loss if you want.</p>
+	{{else}}
+        <p>It's time to determine the winner of your bet with {{{ friend_link }}}:</p>
+        <h2>{{ name }}</h2>
+        <p>
+            As a reminder, here are the terms of the bet:<br/>
+			{{ terms }}.
+        </p>
+        <p><br/>So who won?</p>
+	{{/if}}
+{{/with}}

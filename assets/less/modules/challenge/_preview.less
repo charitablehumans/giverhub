@@ -1,0 +1,143 @@
+.challenge-preview-container {
+  .challenge-preview-block {
+    header {
+      .preview {
+        position    : absolute;
+        top         : 2px;
+        left        : 14px;
+        font-size   : 12px;
+        .roboto-light-italic;
+        font-weight : normal;
+        @media (max-width: 480px) {
+          display: none;
+        }
+        @media (min-width: 768px) and (max-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+    text-align: center;
+    .preview-displayed-here {
+      margin: 20px 0 6px;
+    }
+    .description {
+      margin: 30px 0 65px;
+    }
+    .friend-list {
+      margin-bottom: 30px;
+      list-style: none;
+      padding-left: 0;
+      li {
+        img {
+          .rounded(100%);
+          width: 31px;
+          height: 31px;
+          .box-shadow(0px 3px 4px #595959);
+        }
+        span {
+          top: 4px;
+          margin-left: 11px;
+        }
+      }
+    }
+    iframe {
+      max-width: 250px;
+    }
+    .accept-reject {
+      .btn {
+        padding: 14px 8px !important;
+        font-size: 16px;
+        @media (max-width: 992px) and (min-width: 768px) {
+          display: block;
+          float: none;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          margin-bottom: 5px;
+        }
+        @media (max-width: 390px) {
+          display: block;
+          float: none;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          margin-bottom: 5px;
+        }
+      }
+      .btn-danger {
+        margin-left: 10px;
+        @media (max-width: 992px) and (min-width: 768px) {
+          margin-bottom: 0;
+        }
+        @media (max-width: 390px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .chicken {
+      margin-top: 10px;
+    }
+
+    .nonprofit {
+      background-color: #e4e4e4;
+      border-radius: 5px;
+      margin-top: 7px;
+      overflow: auto;
+      z-index: 1;
+      padding: 10px;
+      .nonprofit-name {
+        background-color: #5b84ff;
+        color: white;
+        padding-left: 4px;
+        border-radius: 4px;
+        a {
+          color: white;
+        }
+      }
+      .progress_bar {
+        margin-top: 9px;
+        margin-bottom: 4px !important;
+      }
+      .nonprofit-tagline {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .donate-container {
+        overflow: auto;
+        padding-bottom: 5px;
+        margin-top: 8px;
+        label {
+          display: inline-block;
+          vertical-align: top;
+          margin-top: 16px;
+          font-size: 12px;
+          @media (max-width: 1053px) and (min-width: 890px) {
+            display: none;
+          }
+        }
+        .charity-profile-donation-amount-input {
+          display: inline-block;
+          width: 77px;
+          padding: 0 5px;
+          height: 31px !important;
+          vertical-align: top;
+          margin-top: 6px;
+          font-size: 13px;
+        }
+        .btn-donate-from-charity-with-amount {
+          padding: 9px;
+          width: 94px;
+          vertical-align: top;
+          margin-left: 20px;
+        }
+        .instant-donation-toggle-container {
+          display: inline-block;
+          float: right;
+        }
+        a {
+          top: 4px;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,78 @@
+.gh-share-buttons-container {
+  width: 208px;
+  margin-left: auto;
+  margin-right: auto;
+  .btn {
+    .roboto-regular;
+    width: 205px;
+    height: 27px;
+    padding-top: 3px;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: auto 25px;
+    margin-bottom: 8px;
+    &:active {
+      background-repeat: no-repeat;
+      background-size: auto 25px;
+    }
+  }
+  .facebook-button {
+    .button-variant-8(#fff; #3b5997; darken(#3b5997, 5%));
+    background-image: url('/img/fb_sign_in_3.png');
+    &:active {
+      background-image: url('/img/fb_sign_in_3.png');
+    }
+  }
+  .twitter-button {
+    .button-variant-8(#fff; #00b0ec; #00b0ec);
+    background-image: url('/img/twitter_bird.png');
+    &:active {
+      background-image: url('/img/twitter_bird.png');
+    }
+  }
+
+  .giverhub-share-checkbox-wrapper {
+    margin-top: 30px;
+    label {
+      display: inline-block;
+      input {
+        margin-top: 0;
+        top: 2px;
+      }
+    }
+  }
+}
+
+#share-petition-modal {
+  .modal-body {
+    padding: 0;
+    .sub-header {
+      background-color: #e4e1ff;
+      color: black;
+      .roboto-light;
+      font-size: 12px;
+      padding: 10px 0;
+      margin-bottom: 11px;
+    }
+    p {
+      text-align: center;
+    }
+    .gh-share-buttons-container {
+      width: 100%;
+      .btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .giverhub-share-checkbox-wrapper {
+        text-align: center;
+        margin-top: 33px;
+        padding: 8px;
+        border-top: 1px solid #d4d4d4;
+        label,div {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

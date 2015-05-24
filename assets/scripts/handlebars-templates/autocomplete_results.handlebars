@@ -1,0 +1,60 @@
+{{#if loading}}
+<li class="loading">
+	Searching... <img src="/images/ajax-loaders/ajax-loader2.gif">
+</li>
+{{/if}}
+{{#each items}}
+	{{#with this}}
+		{{#if nonprofit}}
+			<li class="nonprofit item selectable">
+				<a href="{{ url }}">
+					<img src="{{ image_url }}">
+					<div class="name-description-wrapper">
+						<div class="name">{{ name }}</div>
+						<div class="description">{{ desc }}</div>
+					</div>
+				</a>
+			</li>
+		{{else}}
+			{{#if petition}}
+				<li class="petition item selectable">
+					<a href="{{ url }}">
+						<img src="{{ image_url }}">
+						<div class="name-description-wrapper">
+							<div class="name">{{ name }}</div>
+							<div class="description">Petition</div>
+						</div>
+					</a>
+				</li>
+			{{else}}
+				{{#if user}}
+                    <li class="user item selectable">
+                        <a href="{{ url }}">
+                            <img src="{{ image_url }}">
+                            <div class="name-description-wrapper">
+                                <div class="name">{{ name }}</div>
+                                <div class="description">User</div>
+                            </div>
+                        </a>
+                    </li>
+				{{else}}
+                    <li class="page item selectable">
+                        <a href="{{ url }}">
+                            <img src="{{ image_url }}">
+                            <div class="name-description-wrapper">
+                                <div class="name">{{ name }}</div>
+                                <div class="description">Page</div>
+                            </div>
+                        </a>
+                    </li>
+				{{/if}}
+			{{/if}}
+		{{/if}}
+	{{/with}}
+{{/each}}
+<li class="view-more selected selectable">
+	<form method="post" action="/search">
+		<input type="hidden" value="{{ search_text }}" name="search_text">
+	</form>
+    <a href="#" class="view-more-a" data-search-text="{{ search_text }}">See more results for "{{ search_text }}"</a>
+</li>

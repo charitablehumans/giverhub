@@ -1,0 +1,72 @@
+<div class="modal fade giverhub-petition-create-modal gh-modal-style-2" tabindex="-1" role="dialog" aria-labelledby="giverhub-petition-create-modal" aria-hidden="true">
+    <div class="col-md-5">
+        <div class="modal-content">
+
+            <header class="modal-header clearfix">
+                <span class="header">Create a petition</span>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            </header>
+
+            <section class="modal-body clearfix">
+                <p class="lead txtCntr">Create a Petition</p>
+				<form action="/upload/petition_create" method="POST" enctype="multipart/form-data">
+					<div class="row">
+						<label>
+							Who is the target of your petition?<br/>
+							<input class="form-control target" type="text" placeholder="e.g. a politician, a corporation, a group, etc">
+						</label>
+                        <div class="alert alert-danger" role="alert">
+                            <span class="message"><strong>Oops!</strong> Something unexpected went wrong!</span>
+                        </div>
+					</div>
+					<div class="row">
+						<label>
+							What should they do?<br/>
+							<input class="form-control what" type="text" placeholder="How should they fix the problem?">
+						</label>
+                        <div class="alert alert-danger" role="alert">
+                            <span class="message"><strong>Oops!</strong> Something unexpected went wrong!</span>
+                        </div>
+					</div>
+					<div class="row">
+                        <label>
+                            Why does this matter?<br/>
+                            <textarea class="form-control why" placeholder="Tell the world why they should sign your petition. Why does this matter? Why is it important? What moved you to create this petition?"></textarea>
+                        </label>
+                        <div class="alert alert-wider alert-danger" role="alert">
+                            <span class="message"><strong>Oops!</strong> Something unexpected went wrong!</span>
+                        </div>
+					</div>
+					<div class="row">
+						<label>Do you have a relevant photo?</label>
+						<div class="center">
+							<input class="temp-id" type="hidden" name="tempId" value="">
+							<div class="upl-btn">
+								<button type="button" class="btn btn-primary upload-photo-btn">Upload Photo</button>
+                            	<input type="file" class="petition-photo-input" name="petition-photo-input">
+                            </div>
+							<img src="/images/ajax-loaders/bar.gif" class="upl-loading hide">
+                            <div class="upl-img hide">
+								<img src="/images/ajax-loaders/bar.gif">
+								<button type="button" class="btn btn-xs btn-danger btn-delete-create-giverhub-petition-image" data-loading-text="X">X</button>
+                            </div>
+							or a link to a <span class="bold">Video</span> or <span class="bold">Photo</span>?
+                            <div class="add-url-container">
+								<input class="form-control add-url-input" type="text" placeholder="http://"><button type="button" data-loading-text="ADD" class="add-url-btn">ADD</button>
+                            </div>
+                            <div class="alert add-url-alert alert-danger hide" role="alert">
+                                <span class="message"><strong>Oops!</strong> Something unexpected went wrong!</span>
+                            </div>
+                            <div class="add-url-preview hide"></div>
+                        </div>
+					</div>
+                </form>
+            </section>
+
+            <footer class="modal-footer">
+                <button type="button" class="btn btn-success btn-publish" data-loading-text="Publish">Publish</button>
+				<button type="button" class="btn btn-preview">Preview</button>
+            </footer>
+        </div>
+    </div>
+</div>

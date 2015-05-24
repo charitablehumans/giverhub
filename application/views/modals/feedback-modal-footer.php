@@ -1,0 +1,2 @@
+<p>Note: If you want to remove your name from a petition. Please click the "Request Removal" that is displayed when hovering your name.</p>
+<a href="#" class="btn btn-primary btn-send-feedback" data-loading-text="SENDING...">SEND</a>

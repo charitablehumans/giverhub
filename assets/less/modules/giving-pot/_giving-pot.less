@@ -1,0 +1,76 @@
+.giving-pot-block {
+  header {
+    background-color: #dadafe;
+    .LobsterTwo_Italic !important;
+    color: @body-color !important;
+    font-size: 38px !important;
+    margin-bottom: 0;
+    padding-top: 12px;
+    img {
+      max-height: 55px;
+      top: -4px;
+    }
+    .scope {
+      position: absolute;
+      top: 2px;
+      left: 14px;
+      font-size: 12px;
+      .roboto-light-italic;
+      font-weight: normal;
+    }
+    .company-name {
+      .roboto-light;
+    }
+  }
+  .second {
+    border-radius: 0;
+    margin-top: 0;
+    border-top: 0;
+    background: none;
+    overflow: auto;
+    padding: 0;
+    > div {
+      background-color: #add8e6;
+      .roboto-regular;
+      font-weight: normal;
+      font-size: 18px;
+      @media (max-width: 900px) {
+        font-size: 15px;
+      }
+      padding: 5px 0;
+      @media (max-width: 370px) {
+        border: none !important;
+        display: block;
+        width: 100%;
+        float: none;
+      }
+    }
+    .left-col {
+      border-right: 1px solid @block-border-color;
+      background: #fde8e7;
+    }
+    .right-col {
+      border-left: 1px solid @block-border-color;
+      background: #eafdea;
+    }
+  }
+
+  text-align: center;
+  .summary {
+    .roboto-bold;
+    margin-top: 13px;
+  }
+  .body {
+    .roboto-light;
+    text-align: left;
+  }
+  .btn {
+    .roboto-bold;
+    font-weight: normal;
+  }
+  .real-promotion {
+    .roboto-bold;
+    font-weight: normal;
+    margin: 10px 0 0 0;
+  }
+}

@@ -1,0 +1,72 @@
+.dashboard-buttons-wrapper {
+  overflow: auto;
+  padding-bottom: @grid-gutter-width/2;
+  a {
+    width: 32.37%;
+    margin-left: 1.3333333% !important;
+    margin-bottom: 0 !important;
+    padding: 4px 0 4px 6px;
+    font-size: 16px;
+    color: grey;
+    height: 35px;
+    img {
+      height: 23px;
+    }
+    .glyphicon {
+      margin-right: 5px;
+    }
+  }
+  a:first-child {
+    margin-left: 0 !important;
+  }
+  a:hover {
+
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 991px) {
+  .dashboard-buttons-wrapper {
+    a {
+      font-size: 13px;
+      padding-top: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .dashboard-buttons-wrapper {
+    a {
+      font-size: 12px;
+      padding-top: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard-buttons-wrapper {
+    a {
+      margin-left: 0.3% !important;
+      width: 33%;
+      font-size: 10px !important;
+      padding-top: 9px;
+      .glyphicon {
+        margin-right: 3px;
+      }
+    }
+    a:first-child {
+      margin-left: 0 !important;
+      padding-left: 4px;
+      .glyphicon {
+        margin-right: 1px;
+      }
+    }
+  }
+}
+
+@media (max-width: 303px) {
+  .dashboard-buttons-wrapper {
+    a {
+      height: 48px;
+    }
+  }
+}

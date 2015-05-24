@@ -1,0 +1,115 @@
+.trending-petitions-block {
+  padding-bottom: 0;
+  header {
+    margin-bottom: 0;
+    .btn-hide-trending-pet-stats {
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+  }
+  .search-trending-petitions-wrapper {
+    margin-left: -21px;
+    margin-right: -21px;
+    .search-trending-petitions {
+      text-align    : center;
+      border        : none;
+      border-bottom : 1px solid #d8d8d8;
+      border-radius : 0 !important;
+      background-image: url('/img/search.png');
+      background-repeat: no-repeat;
+      background-position: 13px 9px;
+      @media (max-width: 320px) {
+        background-position: 2px 9px;
+      }
+    }
+  }
+  #trending-petitions-search-results {
+    margin-left: -21px;
+    margin-right: -21px;
+    .nothing {
+      text-align: center;
+      padding: 10px;
+      color: grey;
+      font-style: italic;
+    }
+  }
+  #trending-petitions-search-loading {
+    text-align: center;
+  }
+
+  .petition-wrapper {
+    padding    : 5px 20px;
+    &:nth-child(even) {
+      background-color : #f7f7f7;
+    }
+    margin-top : 0;
+    &:first-child {
+      margin-top : 0;
+    }
+    &:last-child {
+      padding-bottom: 2px;
+    }
+    .petition-link {
+      overflow      : hidden;
+      display       : block;
+      text-overflow : ellipsis;
+      white-space   : nowrap;
+    }
+    img, iframe {
+      max-height     : 32px;
+      width          : 17%;
+      display        : inline-block;
+      vertical-align : top;
+    }
+    .summary {
+      width       : 100%;
+      display     : inline-block;
+      color       : #7d7d7d;
+      font-size   : 14px;
+      line-height : 14px;
+      .roboto-light-italic;
+      max-height  : 32px;
+      overflow    : hidden;
+    }
+    .has-img {
+      width : 81%;
+    }
+  }
+
+  #trending-petitions-carousel {
+    margin-left  : -21px;
+    margin-right : -21px;
+
+    &.has-indicators {
+      padding-bottom: 20px;
+    }
+    .carousel-control.left, .carousel-control.right {
+      background : none !important;
+    }
+    .carousel-control {
+      width: 6%;
+      .glyphicon-chevron-left {
+        left  : 0;
+        top   : 44%;
+        color : grey;
+      }
+      .glyphicon-chevron-right {
+        top   : 44%;
+        left  : initial;
+        right : 0;
+        color : grey;
+      }
+    }
+
+    .carousel-indicators {
+      bottom: 0;
+      li {
+        border-color: grey;
+        &.active {
+          background-color: grey;
+        }
+      }
+    }
+  }
+}

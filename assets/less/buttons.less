@@ -1,0 +1,375 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core styles
+.btn {
+  display: inline-block;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  margin-bottom: 0; // For input.btn
+  font-size: @font-size-base;
+  font-weight: @btn-font-weight;
+  line-height: @line-height-base;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  border-radius: @border-radius-base;
+  white-space: nowrap;
+
+  .roboto-light;
+  &.bold {
+    .roboto-bold;
+  }
+
+  .user-select(none);
+
+  &:focus {
+    //.tab-focus();
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: @btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    .opacity(.65);
+    .box-shadow(none);
+  }
+
+}
+
+
+.btn-default {
+  .button-variant-8(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+
+.btn-primary {
+  .button-variant-8(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+
+.btn-warning {
+  .button-variant-8(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+
+.btn-danger {
+  .button-variant-8(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+.btn-success {
+  .button-variant-8(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+
+.btn-info {
+  .button-variant-8(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.dropdown-menu > li > a.btn-default,
+.btn-group > .btn-default {
+  .button-variant-3(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+
+.dropdown-menu > li > a.btn-primary,
+.btn-group > .btn-primary {
+  .button-variant-3(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+
+.dropdown-menu > li > a.btn-warning,
+.btn-group > .btn-warning {
+  .button-variant-3(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+
+.dropdown-menu > li > a.btn-danger,
+.btn-group > .btn-danger {
+  .button-variant-3(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+.dropdown-menu > li > a.btn-success,
+.btn-group > .btn-success {
+  .button-variant-3(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+
+.dropdown-menu > li > a.btn-info,
+.btn-group > .btn-info {
+  .button-variant-3(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+
+
+
+.btn2-default {
+  .button-variant-2(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn2-primary {
+  .button-variant-2(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn2-warning {
+  .button-variant-2(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn2-danger {
+  .button-variant-2(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn2-success {
+  .button-variant-2(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn2-info {
+  .button-variant-2(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.btn3-default {
+  .button-variant-3(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn3-primary {
+  .button-variant-3(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn3-warning {
+  .button-variant-3(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn3-danger {
+  .button-variant-3(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn3-success {
+  .button-variant-3(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn3-info {
+  .button-variant-3(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.btn4-default {
+  .button-variant-4(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn4-primary {
+  .button-variant-4(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn4-warning {
+  .button-variant-4(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn4-danger {
+  .button-variant-4(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn4-success {
+  .button-variant-4(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn4-info {
+  .button-variant-4(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.btn5-default {
+  .button-variant-5(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn5-primary {
+  .button-variant-5(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn5-warning {
+  .button-variant-5(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn5-danger {
+  .button-variant-5(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn5-success {
+  .button-variant-5(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn5-info {
+  .button-variant-5(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.btn6-default {
+  .button-variant-6(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn6-primary {
+  .button-variant-6(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn6-warning {
+  .button-variant-6(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn6-danger {
+  .button-variant-6(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn6-success {
+  .button-variant-6(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn6-info {
+  .button-variant-6(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.btn7-default {
+  .button-variant-7(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn7-primary {
+  .button-variant-7(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn7-warning {
+  .button-variant-7(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn7-danger {
+  .button-variant-7(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn7-success {
+  .button-variant-7(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn7-info {
+  .button-variant-7(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+.btn8-default {
+  .button-variant-8(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn8-primary {
+  .button-variant-8(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Warning appears as orange
+.btn8-warning {
+  .button-variant-8(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn8-danger {
+  .button-variant-8(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+// Success appears as green
+.btn8-success {
+  .button-variant-8(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn8-info {
+  .button-variant-8(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+
+
+
+.btn-fb-blue {
+  .button-variant(@btn-fb-blue-color; @btn-fb-blue-bg; @btn-fb-blue-border);
+}
+
+.btn-fun-blue {
+  .button-variant(@btn-fun-blue-color; @btn-fun-blue-bg; @btn-fun-blue-border);
+}
+.btn-fun-green {
+  .button-variant(@btn-fun-green-color; @btn-fun-green-bg; @btn-fun-green-border);
+}
+.btn-fun-red {
+  .button-variant(@btn-fun-red-color; @btn-fun-red-bg; @btn-fun-red-border);
+}
+
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: @link-color;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+.btn-sm,
+.btn-xs {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+.btn-xs {
+  padding: 1px 5px;
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,1 @@
+<button tabindex="2" type="button" class="btn btn-close" data-dismiss="modal" aria-hidden="true">CLOSE</button>

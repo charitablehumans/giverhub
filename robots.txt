@@ -1,0 +1,16 @@
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /channel.html
+
+User-agent: *
+Allow: /
+
+Disallow: /petitions/santa-monica-malibu-school-district-keep-shirley-compton-principal-of-grant-elementary-school
+Disallow: /petitions/santa-monica-malibu-school-district-keep-shirley-compton-principal-of-grant-elementary-school/*
+
+Sitemap: https://giverhub.com/sitemap-index.xml

@@ -1,0 +1,382 @@
+.add-volunteering-block {
+  padding: 17px 15px;
+  .isNonprofitAdmin {
+    li {
+      .title {
+        width: 35% !important;
+      }
+      .date {
+        width: 15% !important;
+      }
+      .time {
+        width: 30% !important;
+        padding-right: 2%;
+      }
+    }
+  }
+  .opportunity-list {
+    padding: 0;
+    li {
+      list-style: none;
+      overflow: auto;
+      padding-bottom: 9px;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 5px;
+      .title, .date, .time {
+        float: left;
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-size: 14px;
+        font-weight: normal;
+        padding-top: 4px;
+        margin-right: 2%;
+      }
+      .title {
+        width: 41%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .date {
+        width: 21%;
+      }
+      .time {
+        margin-right: 0;
+        width: 34%;
+        text-align: right;
+      }
+      .btn-edit-opportunity {
+        padding: 4px 7px;
+        float: right;
+      }
+      .btn-delete-opportunity {
+        padding: 4px 7px;
+        float: right;
+      }
+      .time-zone {
+        text-align: right;
+        color: grey;
+        font-size: 11px;
+        font-style: italic;
+        padding-right: 13%;
+        clear: both;
+      }
+    }
+    .popover {
+      .arrow:after {
+        border-bottom-color: #f7f7f7;
+      }
+      .popover-inner {
+        .popover-title {
+          color: black;
+          font-weight: normal;
+          font-size: 14px;
+        }
+        .popover-content {
+          background-color: white;
+          color: black;
+          p.last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  .add-wrapper {
+    span {
+      top: 6px;
+      font-style: italic;
+      font-size: 17px;
+      color: grey;
+    }
+    button {
+      float: right;
+      padding: 7px 16px;
+    }
+  }
+  .add-wrapper2 {
+    text-align: center;
+    a {
+      font-style: italic;
+      font-size: 17px;
+      color: grey;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.create-volunteering-opportunity-modal {
+  z-index: 99999 !important;
+  form {
+    input, textarea {
+      margin-bottom: 10px;
+    }
+    label {
+      display: inline-block;
+    }
+    .times-wrapper {
+      text-align: left;
+      .time-zone {
+        text-align: left;
+        display: block;
+        padding-left: 10px;
+      }
+      input,select {
+        display: inline-block;
+        width: 18%;
+        margin-left: 0;
+        margin-right: 1% !important;
+        margin-bottom: 0;
+        vertical-align: top;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 12px;
+        text-align: center;
+      }
+      select {
+        padding-left: 8px;
+      }
+      input:first-child {
+        margin-left: 0 !important;
+      }
+      .to {
+        top: 9px;
+        left: -2px;
+      }
+      a {
+        top: 11px;
+      }
+      button {
+        box-shadow: none;
+      }
+      ul {
+        padding-bottom: 5px;
+      }
+    }
+    .all-day-label {
+      margin: 5px 0 10px;
+      input {
+        margin: 0 4px 0 0;
+        top: 2px;
+      }
+    }
+    .hastimezone {
+      background-color: #ffffe0;
+      padding: 8px;
+    }
+  }
+}
+.time-zones-modal {
+  z-index: 100000 !important;
+}
+.repeat-modal {
+  z-index: 100000 !important;
+}
+
+.volunteering-page {
+  .volunteering-opportunities-block {
+    padding: 15px 15px 0;
+
+    header {
+      margin-left: -15px;
+      margin-right: -15px;
+      /*background-color: transparent;
+      text-align: left;
+      padding-left: 10px;
+      .roboto-light;*/
+      margin-bottom: 0;
+    }
+    .volunteering-block {
+      overflow: auto;
+      font-size: 16px;
+      margin: 0 -15px 5px;
+      text-align: center;
+      border-top: 1px solid grey;
+      &.first {
+        border-top: none;
+      }
+      header {
+        background-color: transparent;
+        overflow: auto;
+        height: auto;
+        border: 0;
+        margin: 0;
+        position: relative;
+        padding: 6px 0 7px 10px;
+        text-align: left;
+        .roboto-bold;
+        .dated,.time {
+          float: left;
+          font-size: 20px;
+        }
+        .dated {
+          margin-right: 13px;
+        }
+        .time {
+          font-size: 15px;
+          top: 6px;
+        }
+      }
+      .desc {
+        background-color: #cdeccd;
+        border-radius: 4px;
+        padding: 6px;
+        .roboto-light;
+        font-size: 15px;
+        margin: 0 7px;
+        text-align: left;
+      }
+      .location {
+        margin-left: 10px;
+        margin-top: 7px;
+        .roboto-light;
+        font-size: 15px;
+        text-align: left;
+        .bold {
+          .roboto-bold;
+        }
+      }
+      .btn-volunteer {
+        margin-bottom: 4px;
+        padding: 5px 26px;
+      }
+    }
+  }
+}
+
+#vol-event-modal .modal-body {
+  padding: 0 15px;
+  .wrapper {
+    .volunteering-page > .volunteering-opportunities-block > .volunteering-block;
+    border-top: 0;
+  }
+}
+#vol-msg-modal .modal-body, .accept_vol_request_modal .modal-body {
+  textarea {
+    width: 90%;
+    box-sizing: content-box !important;
+    padding-bottom: 160px;
+  }
+  .event-wrapper {
+    .volunteering-page > .volunteering-opportunities-block > .volunteering-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 80%;
+    margin: 0;
+    position: absolute;
+    bottom: 79px;
+    left: 37px;
+    .btn-volunteer {
+      display: none;
+    }
+  }
+  .btn-send-vol-request {
+    margin-top: 9px;
+  }
+}
+
+#embed-vol-cal-modal {
+  textarea {
+    width: 100%;
+    height: 100px;
+    cursor: auto;
+  }
+}
+
+.review-volunteering-opportunities-block {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .gh_block_title {
+    margin-bottom: 2px;
+  }
+  .rating-wrapper {
+    font-size: 11px;
+    color: grey;
+    span {
+      font-size: 21px;
+      color: grey;
+      top: 3px;
+      .glyphicon-star {
+        color: #525252;
+      }
+    }
+  }
+  .thanks-wrapper {
+    margin: 16px 0;
+  }
+  form {
+    textarea {
+      margin: 5px 0 7px;
+      height: 100px;
+    }
+  }
+  .reviews-count-wrapper {
+    overflow: auto;
+    border-top: 1px solid lightgrey;
+    margin-top: 8px;
+    padding-top: 5px;
+    .pull-left {
+      font-size: 18px;
+    }
+    .pull-right {
+      a {
+        top       : 3px;
+        font-size : 12px;
+      }
+    }
+  }
+}
+
+.vol-cal-block {
+  .vol-cal {
+    .fc-toolbar {
+      .fc-center {
+        h2 {
+          font-size: 13px;
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+  .footer-link {
+    margin: 12px -21px -16px;
+    border-top: 1px solid #cdcdcd;
+    display: block;
+    width: auto;
+    text-align: center;
+    padding: 6px;
+    color: #6b6b6b;
+  }
+}
+
+.embed-vol-cal-block {
+  text-align: center;
+  button {
+    display: inline-block;
+  }
+}
+
+.vol-list-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  .volunteering-block {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 2px solid #ccc !important;
+    &:first-child {
+      border-right: 2px solid #ccc !important;
+    }
+    margin-bottom: 0 !important;
+    padding-bottom: 5px !important;
+  }
+  &.last-row {
+    .volunteering-block {
+      border-bottom: none !important;
+    }
+  }
+}

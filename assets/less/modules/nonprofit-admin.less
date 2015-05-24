@@ -1,0 +1,153 @@
+.nonprofit-secondary-header .org_header {
+  .org_name {
+    .btn-edit-nonprofit-name {
+      padding: 2px 8px;
+      top: -3px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .ss {
+      width: auto;
+      display: inline-block;
+    }
+  }
+}
+
+#nonprofit-admin-edit-name-url-modal > .col-md-6 {
+  @media (min-width: 562px) {
+    width: 562px;
+  }
+}
+#nonprofit-admin-edit-name-url-modal {
+  .modal-content {
+    text-align: center;
+  }
+  .modal-header {
+    .gh_lightbox_logo {
+      margin-bottom: 10px;
+    }
+  }
+  .modal-body {
+    display: inline-block;
+    width: auto;
+    color: black;
+    font-weight: bold;
+    letter-spacing: normal;
+    font-size: 13px;
+    margin: 0;
+    text-shadow: none;
+
+    form {
+      overflow: auto;
+    }
+    label {
+      float: right;
+      font-weight: bold;
+      clear: both;
+      &:last-child {
+        border-top: 1px solid lightgrey;
+        padding-top: 5px;
+      }
+      @media (max-width: 561px) {
+        display: block;
+        width: 100%;
+      }
+      input {
+        display: inline-block;
+        width: 290px;
+        @media (max-width: 561px) {
+          width: 100%;
+          display: block;
+        }
+      }
+      .alert {
+        margin-bottom: 0;
+        margin-top: 2px;
+      }
+    }
+    p {
+      text-align: right;
+    }
+  }
+
+  .modal-footer {
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+    @media (max-width: 561px) {
+      padding: 0;
+      button {
+        padding: 4px 19px;
+      }
+    }
+  }
+}
+
+#upload-charity-header-pic, #upload-charity-logo {
+  display: inline-block;
+}
+
+
+.upload-logo-wrapper {
+  transition: 1s;
+  font-size: 23px;
+  .nonprofit-logo-img {
+    max-width: 100%;
+    max-height: 200px;
+  }
+  background-color: transparent;
+}
+
+.upload-logo-wrapper-hidden {
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+.charity-admin-data-form {
+  label {
+    font-size: 14px;
+    input {
+      margin-top: 5px;
+    }
+    ul {
+      padding-top: 5px;
+      li {
+        margin-bottom: 7px;
+      }
+    }
+  }
+  .popover {
+    .popover-content {
+      background-color: #fcfcfc;
+      color: black;
+    }
+    .arrow::after {
+      border-top-color: #f7f7f7;
+    }
+  }
+}
+
+#request-charity-admin-container {
+  padding-bottom: 0;
+  text-align: right;
+  a {
+    color: @body-color;
+    text-decoration: underline;
+  }
+  span { display: none; }
+}
+
+#request-charity-admin-container.requested {
+  a { display: none; }
+  span { display: inline-block; }
+}
+
+#request-charity-admin-form {
+  input {
+    margin-bottom: 12px;
+  }
+  textarea {
+    height: 84px;
+  }
+}

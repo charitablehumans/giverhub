@@ -1,0 +1,80 @@
+.nonprofit-secondary-header {
+  padding-bottom: 0;
+  @media (max-width: @screen-xs-max) {
+    margin-bottom: 0;
+  }
+  .org_header {
+    padding-top: 15px;
+    padding-bottom: 0;
+    .org_name {
+      margin: 0 0 16px;
+    }
+    .progress {
+      margin-bottom: 0;
+    }
+    .charity_header_donate {
+      address {
+        background: none;
+        padding: 0;
+        color: @body-color;
+        .roboto-bold;
+        font-size: 16px;
+        margin-bottom: 0;
+        &:after {
+          display: none;
+        }
+        @media (max-width: @screen-xs-max) {
+          text-align: left;
+          margin-top: 14px;
+        }
+      }
+      .charity-admin-container {
+        text-align: center;
+        padding: 10px 0 4px;
+        overflow: auto;
+        font-size: 13px;
+        font-style: italic;
+        .btn {
+          font-style: normal;
+        }
+      }
+    }
+    .keywords {
+      .labels {
+        .text-right;
+        padding: 0;
+        ul {
+          padding: 0;
+          margin-bottom: 0;
+          li {
+            background:url('../images/label.png') no-repeat right top;
+            color:#79796A;
+            line-height:23px;
+            margin-left:15px;
+            padding:0 19px 3px 0;
+            .iBlk;
+          }
+          li:after {
+            content:'';
+            background:url('../images/label.png') no-repeat left top;
+            width:12px;
+            height:26px;
+            left:-12px;
+            top:0;
+            position:absolute;
+          }
+        }
+        a {
+          color: @body-color-light;
+          text-decoration: none;
+          margin-top: 3px;
+          font-size: 13px;
+          margin-bottom: 6px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

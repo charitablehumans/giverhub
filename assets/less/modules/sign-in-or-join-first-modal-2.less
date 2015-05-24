@@ -1,0 +1,199 @@
+#sign-in-or-join-first-modal-2 {
+  .modal-size-setter-ugh {
+    max-width: 673px;
+  }
+  @media (max-width: 320px) {
+    .modal-content {
+      margin-left : -10px;
+    }
+  }
+
+  .modal-body {
+    padding-bottom: 40px;
+    @media (max-width: 320px) {
+      padding-left: 12px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+
+    .alert-danger {
+      color: rgb(89, 89, 89);
+      @media (max-width: 320px) {
+        padding: 4px 0;
+        font-size: 15px;
+      }
+    }
+    .col-md-12 {
+      @media (max-width: 320px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .col-md-6 {
+      @media (max-width: 320px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+
+      @media (min-width: 500px) {
+        &:first-child {
+          padding-left  : 30px;
+          padding-right : 15px;
+        }
+
+        &:last-child {
+          padding-left  : 14px;
+          padding-right : 30px;
+        }
+      }
+
+      @media (min-width:500px) {
+        float: left;
+        width: 50%;
+        &:first-child {
+          &:after {
+            content:"";
+            background: lightgrey;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 90%;
+            width: 1px;
+          }
+        }
+      }
+
+      @media (max-width: 499px) {
+        &:first-child {
+          padding-bottom: 20px;
+          border-bottom: 1px solid lightgrey;
+          margin-bottom: 9px;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 28px;
+        @media (max-width: 320px) {
+          font-size: 19px;
+        }
+      }
+      .sign_up_fb, .sign_up_google {
+        border: 1px solid #c6c6c8;
+        border-radius: 5px;
+        color: white;
+        width: 100%;
+        display: block;
+        background: none;
+        font: 300 17px/24.31px "vegur-bold";
+        background-repeat: no-repeat;
+        background-size: auto 40px;
+        height: 42px;
+        padding: 7px 5px 0 61px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .sign_up_fb {
+        background-color: #3b579d;
+        background-image: url('/img/fb_sign_in_3.png');
+        margin-bottom: 10px;
+        &:hover {
+          background-color: #384d90;
+        }
+      }
+      .sign_up_google {
+        background-color: #df4a32;
+        background-image: url('/img/google_sign_in_3.png');
+        margin-bottom: 6px;
+        &:hover {
+          background-color: #d44830;
+        }
+      }
+      .gh_lightbox_separator {
+        margin-bottom: 15px;
+      }
+
+      .input-container {
+        input {
+          margin-bottom: 10px;
+        }
+        button {
+          display: block;
+          width: 100%;
+          font-size: 28px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+#sign-in-modal-2, #sign-up-modal-2 {
+  .modal-size-setter-ugh {
+    max-width: 333px;
+  }
+
+
+  .modal-body {
+    padding-bottom : 40px;
+    @media (max-width : 320px) {
+      padding-left    : 1px;
+      padding-right   : 7px;
+      padding-bottom  : 10px;
+    }
+
+    .sign_up_fb, .sign_up_google {
+      border: 1px solid #c6c6c8;
+      border-radius: 5px;
+      color: white;
+      width: 100%;
+      display: block;
+      background: none;
+      font: 300 17px/24.31px "vegur-bold";
+      background-repeat: no-repeat;
+      background-size: auto 40px;
+      height: 42px;
+      padding: 7px 5px 0 61px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .sign_up_fb {
+      background-color: #3b579d;
+      background-image: url('/img/fb_sign_in_3.png');
+      margin-bottom: 10px;
+      &:hover {
+        background-color: #384d90;
+      }
+    }
+    .sign_up_google {
+      background-color: #df4a32;
+      background-image: url('/img/google_sign_in_3.png');
+      margin-bottom: 6px;
+      &:hover {
+        background-color: #d44830;
+      }
+    }
+    .gh_lightbox_separator {
+      margin-bottom: 15px;
+    }
+
+    .input-container {
+      input {
+        margin-bottom: 10px;
+      }
+      button {
+        display: block;
+        width: 100%;
+        font-size: 28px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+#sign-in-modal-2 .modal-body {
+  padding-bottom: 18px;
+}

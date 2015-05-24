@@ -1,0 +1,107 @@
+#giving-pot-dashboard-main {
+  .giving-pot-recipients-block {
+    .giving-pot-recipients-form {
+      margin-left: -15px;
+      margin-right: -15px;
+      table {
+        tr {
+          th {
+            text-align: center;
+          }
+          .num {
+            width: 5%;
+            text-align: center;
+          }
+          .name {
+            width: 45%;
+          }
+          .email {
+            width: 35%;
+          }
+          .amount {
+            width: 15%;
+          }
+          td {
+            padding: 5px 10px;
+            input {
+              height: 30px !important;
+              border: 1px solid @body-color;
+              &.error {
+                border-color: red;
+              }
+            }
+          }
+          @media (max-width: 350px) {
+            td, th {
+              padding-left  : 1px;
+              padding-right : 1px;
+            }
+            th {
+              font-size: 10px;
+            }
+            .num {
+              display: none;
+            }
+            .name {
+              padding-left: 5px;
+            }
+            .amount {
+              padding-right: 5px;
+              width: 20%;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      text-align: center;
+      margin-top: 10px;
+      .btn-add-more-recipients {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: @body-color;
+        text-decoration: underline;
+      }
+      @media (max-width: 500px) {
+        text-align: left;
+        a, button {
+          display: inline-block;
+          position: relative !important;
+          left: auto;
+          right: auto;
+          top: auto;
+          bottom: auto;
+        }
+        .btn-add-more-recipients {
+          top: 4px;
+        }
+      }
+      @media (max-width: 290px) {
+        a, button {
+          display: block;
+          margin: 0 auto;
+          top: 0 !important;
+          text-align: center;
+        }
+        a {
+          margin-bottom: 13px;
+        }
+      }
+    }
+  }
+  .giving-pot-existing-recipients-block {
+    table {
+      .name {
+        width: 45%;
+      }
+      .email {
+        width: 30%;
+      }
+      .amount, .remaining {
+        text-align: center;
+        width: 12.5%;
+      }
+    }
+  }
+}

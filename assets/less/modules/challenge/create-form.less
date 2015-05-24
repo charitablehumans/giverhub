@@ -1,0 +1,52 @@
+.create-challenge-form {
+  footer {
+    > * {
+      float : right;
+      @media (max-width: 320px) {
+        float: none;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 10px;
+      }
+    }
+    .btn-challenge-save-draft {
+      margin-right: 35px;
+    }
+  }
+  .youtube-preview-container {
+    text-align: center;
+    iframe {
+      border    : none;
+      max-width : 250px;
+    }
+  }
+  .emails {
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+    li {
+      .btn-danger {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      padding-right: 22px;
+      margin-bottom: 7px;
+    }
+  }
+  .email-wrapper {
+    > * {
+      display: inline-block;
+    }
+    input {
+      width: 80%;
+    }
+    button {
+      width: 18%;
+      margin-left: 2%;
+      padding: 8px;
+      top: -1px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<pre><?php print_r(\Entity\Charity::$high_low_markers); ?></pre>

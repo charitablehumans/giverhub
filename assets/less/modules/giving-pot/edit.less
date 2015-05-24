@@ -1,0 +1,82 @@
+#giving-pot-edit-main {
+  .edit-giving-pot-form-block {
+    text-align: center;
+    header {
+      .saving {
+        font-size: 12px;
+        position: absolute;
+        top: 17px;
+        right: 5px;
+      }
+    }
+    h2 {
+      color: @body-color;
+      font-size  : 20px;
+      text-align : center;
+      margin-top: 9px;
+      margin-bottom: 25px;
+    }
+    .logo-wrapper {
+      img {
+        max-height: 55px;
+      }
+    }
+    .logo-or-name-wrapper {
+      #upload-giving-pot-logo-form {
+        display : inline-block;
+        top: -2px;
+        button {
+          margin-top : 0;
+          width: 140px;
+        }
+        input {
+          .upload-button-input(143px, 37px);
+          height : 37px !important;
+        }
+      }
+      span {
+        display: inline-block;
+        margin: 0 20px;
+      }
+      .form-control {
+        width: 164px;
+      }
+      @media (max-width: 420px) {
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .form-control {
+      display: inline-block;
+      height: 36px !important;
+    }
+
+    label {
+      font-size: 13px;
+      text-align: center !important;
+      margin: 40px 0 10px;
+      letter-spacing: 0;
+    }
+    .input-pot-size, .input-summary, .input-button-text {
+      width: 180px;
+    }
+    .input-body {
+      height: 100px !important;
+    }
+
+    .alert {
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 3px;
+    }
+    .error-wide {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .payment-method {
+      margin: 40px 0 40px;
+    }
+  }
+}

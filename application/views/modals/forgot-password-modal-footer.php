@@ -1,0 +1,1 @@
+<a class="btn btn-primary btn-submit-forgot-password cntr">SUBMIT</a>

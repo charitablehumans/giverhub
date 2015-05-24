@@ -1,0 +1,56 @@
+.fun-donations-block {
+  padding-bottom: 0;
+  header {
+    margin-bottom: 3px;
+  }
+  .btn {
+    display: block;
+    margin: 0 -18px 7px;
+    font-size: 25px;
+    @media (max-width: 320px) {
+      font-size: 18px;
+    }
+    line-height: normal;
+    span {
+      font-weight: normal;
+      font-size: 27px;
+      @media (max-width: 320px) {
+        font-size: 20px;
+      }
+      top: 1px;
+    }
+    .fun-donations-help {
+      height: 26px;
+      top: -1px;
+      & + .popover {
+        width       : 600px;
+        text-shadow : none;
+        opacity     : 0.9;
+        .popover-content {
+          background-color : #000;
+          opacity          : 0.9;
+          font-family      : "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size        : 13px;
+          line-height      : 1.5;
+          color            : #fff;
+          padding          : 10px;
+        }
+      }
+    }
+
+
+    &.btn-fun-green {
+      font-size: 22px;
+      @media (max-width: 320px) {
+        font-size: 19px;
+      }
+      .roboto-light;
+      span {
+        font-size: 30px;
+        @media (max-width: 320px) {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<div class="col-md-5">
+	<div class="modal-content">
+        <header class="modal-header clearfix">
+            <span class="header">Review petition</span>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        </header>
+
+		<section class="modal-body clearfix giverhub-petition-modal-body">
+			<h2 class="txtCntr">Review</h2>
+			<div class="gh_lightbox_separator"></div>
+			<div class="row">
+				<div class="col-md-6">
+	
+					{{#exists img_url}}
+						<div class="giverhub-petition-media-content">
+				        	img: <img src="{{img_url}}"><br/>
+						</div>
+					{{/exists}}
+
+					{{#exists photo_src}}
+						<div class="giverhub-petition-media-content">
+							<img src="{{photo_src}}" style="vertical-align: middle;"><br/>
+						</div>						
+					{{/exists}}
+
+					{{#exists video_id}}
+						<div class="giverhub-petition-media-content">
+						    <iframe
+								class="youtube-player youtube-preview-iframe"
+								type="text/html"
+						    	width="100%"
+						    	height=""
+						    	src="https://www.youtube.com/embed/{{ video_id }}"
+						    	allowfullscreen
+						    	frameborder="0"></iframe>
+						</div>
+					{{/exists}}
+
+					{{#exists no_media}}
+						<div class="giverhub-petition-media-content">
+							{{{no_media}}}
+						</div>
+					{{/exists}}
+
+				</div>
+			
+				<div class="col-md-6 giverhub-petition-by-what">
+					<div><span style="font-weight:bold">Petition By:</span> {{{ giverhub_petition_added_by }}}</div>
+					<div style="margin-top:8px;"><span style="font-weight:bold">Petitioning</span>  {{ target }}</div>
+					<div>{{ what }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 giverhub-petition-why">{{{ why }}}</div>
+			</div>
+			
+		</section>
+
+		<footer class="modal-footer">
+			<button type="button" class="btn btn-success btn-publish" data-loading-text="Publish">Publish</button>
+			<button type="button" class="btn btn-edit">Edit</button>
+		</footer>
+	</div>
+</div>

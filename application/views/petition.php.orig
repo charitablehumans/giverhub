@@ -1,0 +1,138 @@
+<?php
+/** @var \Entity\ChangeOrgPetition $petition */
+/** @var \Petitions $CI */
+$CI =& get_instance();
+$user = \Base_Controller::$staticUser;
+?>
+
+<?php $this->load->view('/_petition_header', array('petition' => $petition)); ?>
+
+<main class="" role="main">
+
+    <?php $this->load->view('/_petition_tabs', array('currentTabName' => 'overview')); ?>
+
+    <section class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h2 class="page_title">OVERVIEW</h2>
+            </div>
+
+
+            <!-- COL #1 -->
+            <div class="col-md-6">
+
+                <div class="block">
+                    <h3 class="gh_block_title gh_spacer_21">Petition Information <i class="icon-info-alt pull-right"></i></h3>
+
+                    <span class="color_title gh_spacer_7 blk">TITLE:</span>
+
+                    <div class="blk gh_spacer_21">
+                        <p><?php echo htmlspecialchars($petition->getTitle()); ?></p>
+                    </div>
+
+                    <span class="color_title gh_spacer_7 blk">OVERVIEW:</span>
+
+                    <div id="petition-overview-container" class="blk gh_spacer_7">
+                        <div id="petition_show_normal">
+                            <?php echo $petition->getOverview(); ?>
+                        </div>
+                        <div id="petition_show_more" style="display: none"><?php echo $petition->getOverview(); ?></div>
+                    </div>
+
+                    <?php /*if( strlen($petitionOverview) < strlen($petition->getOverview()) ): */ ?>
+                        <p><a id="expand-petition-overview" href="#">View More</a></p>
+                    <?php /*endif;*/ ?>
+                    <a href="<?php echo $petition->getUrl(); ?>">View petition on change.org</a>
+                </div>
+                <!-- block end -->
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="block">
+                    <h3 class="gh_block_title gh_spacer_21">Sign Petition <i class="icon-heart pull-right"></i></h3>
+                    <?php if (!$CI->user): ?>
+                        <p>You need to be signed in to GiverHub sign petitions.</p>
+                    <?php elseif ($petition->getStatus() != 'open'): ?>
+                        <p>This petition is no longer open for signing.</p>
+                    <?php elseif($petition->hasEnded()): ?>
+                        <p>This petition has ended.</p>
+                    <?php elseif($user && $user->hasSignedPetition($petition)): ?>
+                        <p>You already signed this petition.</p>
+                    <?php elseif(!$petition->getAuthKey()): ?>
+                        <p>This petition can only be signed from change.org. <a target="_blank" href="<?php echo $petition->getUrl(); ?>">Click here</a>.</p>
+                    <?php else: ?>
+                        <form action="" class="gh_donation">
+                            <div class="gh_form_block row gh_spacer_21">
+
+                                <div class="col-md-9 gh_spacer_21">
+                                    <textarea id="sign-petition-reason-overview" class="form-control" rows="3" placeholder="Why is this important to you? (Optional)" name="reason"></textarea>
+                                </div>
+                                <div class="col-md-3 sign-petition-right-block">
+                                    <div class="col-xs-12 col-md-12">
+                                        <a
+                                        href="#"
+                                        class="btn btn-danger btn-sign-petition-overview"
+                                        data-loading-text="SIGNING..."
+                                        data-petition-id="<?php echo $petition->getId(); ?>"
+                                        style="margin-right:15px;">SIGN</a>
+                                    </div>
+
+                                    <label for="sign-petition-hidden-overview"><input id="sign-petition-hidden-overview" type="checkbox" name="hidden"> Hide signature</label>
+                                    <label for="share-petition-signature-on-facebook"><input id="share-petition-signature-on-facebook" type="checkbox" name="share-petition-signature-on-facebook"> Share On Facebook</label>
+                                </div>
+                            </div>
+
+                            <!-- clearfix end -->
+                        </form>
+                    <?php endif; ?>
+                    <hr/>
+                    This petition is powered by Change.org. By signing, you accept Change.org's <a href="http://www.change.org/about/terms-of-service" target="_blank">terms of service</a> and <a href="http://www.change.org/about/privacy" target="_blank">privacy policy</a>.
+                    <!-- gh_donation end -->
+                </div>
+                <!-- block end -->
+
+                <div class="block">
+                    <h3 class="gh_block_title gh_spacer_21">Recent Signatures <i class="icon-updates pull-right"></i></h3>
+
+                    <div class="table-responsive">
+                        <?php $this->load->view('_petition_recent_signatures_table', array('petition' => $petition)); ?>
+                    </div>
+                    <!-- table-responsive end -->
+                </div>
+                <!-- block end -->
+
+            </div>
+
+        </div>
+    <!-- row end -->
+    </section>
+<!-- container end -->
+</main>
+
+
+    <div class="modal fade" id="display-photo-modal" tabindex="-1" role="dialog" aria-labelledby="display-photo-modal" aria-hidden="true">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="modal-content">
+
+                <header class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove-sign"></i></button>
+                    <span class="gh_lightbox_logo"><img src="/img/logo.png"></span>
+                    <div class="gh_lightbox_separator"><i class="icon-user"></i></div>
+                </header>
+
+                <section class="modal-body clearfix">
+                    <img id="display-photo-modal-img" alt="" src="" class="img-responsive"/>
+                </section><!-- modal-body end -->
+
+                <footer class="modal-footer">
+                    <span class="gh_lightbox_separator"></span>
+                    <br/>
+                    <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">OK</button>
+                </footer>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+<?php if ($CI->user) { $CI->load->view('_address-modal'); }

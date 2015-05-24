@@ -1,0 +1,1 @@
+<a href="#" class="ok-button btn btn-primary" data-dismiss="modal" aria-hidden="true" data-default-text="CLOSE">CLOSE</a>

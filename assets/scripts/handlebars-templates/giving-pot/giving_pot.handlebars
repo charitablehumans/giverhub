@@ -1,0 +1,23 @@
+<div class="block giving-pot-block">
+	<header>
+		<span class="scope">{{scope}}</span>
+		The
+		{{#if companyLogo}}
+			<img src="{{companyLogo}}">
+		{{else}}
+			<span class="company-name">{{#if companyName}}{{companyName}}{{else}}[logo/name]{{/if}}</span>
+		{{/if}} Giving Pot
+	</header>
+	<header class="second">
+		<div class="col-xs-6 left-col">Original Pot: ${{potSize}}</div>
+        <div class="col-xs-6 right-col">Amount Remaining: ${{amountRemaining}}</div>
+	</header>
+    <p class="summary">{{#if summary}}{{summary}}{{else}}[Short Description]{{/if}}</p>
+	<p class="body">{{#if body}}{{{body}}}{{else}}[Body]{{/if}}</p>
+
+	<a href="{{#if buttonUrl}}{{buttonUrl}}{{else}}#{{/if}}"
+	   {{#if buttonUrl}}target="_blank"{{/if}}
+	   type="button"
+	   class="btn btn-primary">{{#if buttonText}}{{buttonText}}{{else}}[BUTTON TEXT]{{/if}}</a>
+	<p class="real-promotion">THIS IS NOT A REAL PROMOTION</p>
+</div>

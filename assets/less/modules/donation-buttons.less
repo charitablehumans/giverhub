@@ -1,0 +1,142 @@
+.btn-donate-using-cc-paypal-button, .btn-donate-using-cc-paypal-button-with-amount {
+  display: inline-block;
+  img {
+    display: inline-block;
+    width: 100px;
+  }
+}
+
+.btn-donate-using-cc-paypal-button.paypal {
+  top: -3px;
+  .nonprofits-table & {
+    @media (max-width: @screen-sm-max) and (min-width: 863px) {
+      top: 0;
+    }
+  }
+}
+
+
+.btn-donate-using-cc-paypal-button:hover, .btn-donate-using-cc-paypal-button-with-amount:hover {
+  img {
+    opacity: 0.8;
+  }
+}
+
+.btn-donate-using-cc-paypal-button:active, .btn-donate-using-cc-paypal-button-with-amount:active {
+  img {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 991px) {
+  .challenge-page-info {
+    .nonprofit {
+      .donate-container {
+        label, input, a {
+          float: left;
+        }
+        a {
+          margin-left: 2px;
+          margin-top: 4px;
+          img {
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nonprofit-donation-box-block {
+  padding: 4px !important;
+  .donation-amount-wrapper {
+    float: left;
+    width: 44%;
+    padding: 16px 0 16px 10px;
+
+    @media (max-width: 1125px) and (min-width: 992px) {
+      padding-left: 5px;
+    }
+    @media (max-width: 1119px) {
+      width: 36%;
+    }
+  }
+  .donation-buttons-wrapper {
+    float: left;
+    width: 56%;
+    @media (max-width: 1119px) {
+      width: 64%;
+    }
+    text-align: left;
+    padding: 16px 0;
+    .btn-donate-using-cc-paypal-button, .btn-donate-using-cc-paypal-button-with-amount {
+      margin-left: 5px;
+      img {
+        width: 118px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .nonprofit-donation-box-block {
+    .donation-amount-wrapper {
+      input {
+        height : 33px !important;
+      }
+    }
+    .donation-buttons-wrapper {
+      .btn-donate-using-cc-paypal-button, .btn-donate-using-cc-paypal-button-with-amount {
+        img {
+          width: 93px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nonprofit-donation-box-block {
+    .donation-amount-wrapper {
+      width: 30%;
+      padding-left: 0;
+      input {
+        height : 33px !important;
+      }
+    }
+    .donation-buttons-wrapper {
+      width: 70%;
+      .btn-donate-using-cc-paypal-button, .btn-donate-using-cc-paypal-button-with-amount {
+        img {
+          width: 93px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 297px) {
+  .nonprofit-donation-box-block {
+    .donation-amount-wrapper {
+      width: auto;
+      display: block;
+      float: none;
+      padding: 4px;
+      input {
+        height : 33px !important;
+      }
+    }
+    .donation-buttons-wrapper {
+      width: auto;
+      display: block;
+      float: none;
+      padding: 4px;
+      .btn-donate-using-cc-paypal-button, .btn-donate-using-cc-paypal-button-with-amount {
+        img {
+          width: 93px;
+        }
+      }
+    }
+  }
+}
+
